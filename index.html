@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>AdNexa Technologies | Award Winning Digital Agency</title>
   <!-- Google Fonts + Font Awesome + Swiper CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
@@ -58,30 +61,10 @@
     }
 
     .logo-img {
-      width: 48px;
-      height: 48px;
+      height: 60px;
+      width: auto;
       object-fit: contain;
-      background: #f0f4fa;
-      border-radius: 16px;
-      padding: 6px;
       transition: transform 0.2s;
-    }
-
-    .logo-text h1 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #0B2B5E, #1E4A8B);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      line-height: 1.2;
-    }
-
-    .logo-text span {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #4b5563;
     }
 
     /* Navigation */
@@ -197,8 +180,15 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Section styling */
@@ -291,29 +281,160 @@
     }
 
     /* About section */
-    .about-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3rem;
-      align-items: center;
-    }
+   /* ========== MODERN ABOUT SECTION ========== */
+#about {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  overflow: hidden;
+}
 
-    .about-text {
-      flex: 1.2;
-    }
+#about::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,102,255,0.03) 0%, rgba(0,102,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
 
-    .about-image {
-      flex: 0.8;
-      text-align: center;
-    }
+#about::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0,102,255,0.02) 0%, rgba(0,102,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
 
-    .about-image img {
-      width: 100%;
-      max-width: 380px;
-      border-radius: 2rem;
-      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-    }
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
 
+.about-text {
+  flex: 1.2;
+}
+
+.about-text .section-title {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-text .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0066ff, #00a3ff);
+  border-radius: 3px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1.2rem;
+}
+
+.about-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #0066ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.about-image {
+  flex: 0.8;
+  text-align: center;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-flex {
+    gap: 2rem;
+  }
+  .about-text .section-title {
+    text-align: center;
+  }
+  .about-text .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .about-text p {
+    text-align: center;
+  }
+  .about-stats {
+    justify-content: center;
+  }
+  .stat-item {
+    justify-content: center;
+  }
+}
     /* Testimonials */
     .testimonial-grid {
       display: grid;
@@ -566,7 +687,7 @@
     }
 
     .step-arrow i {
-      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.05));
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.05));
     }
 
     /* ========== INFINITE LOGO SLIDER (PURE CSS) ========== */
@@ -671,6 +792,7 @@
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
@@ -711,6 +833,7 @@
       position: relative;
       display: inline-block;
     }
+
     .footer-col h4:after {
       content: '';
       position: absolute;
@@ -722,7 +845,8 @@
       border-radius: 2px;
     }
 
-    .footer-col p, .footer-col a {
+    .footer-col p,
+    .footer-col a {
       color: #94a3b8;
       text-decoration: none;
       display: block;
@@ -742,6 +866,7 @@
       gap: 0.7rem;
       margin-bottom: 0.8rem;
     }
+
     .contact-detail i {
       width: 24px;
       color: #0066ff;
@@ -752,6 +877,7 @@
       gap: 0.5rem;
       margin-top: 1rem;
     }
+
     .newsletter-form input {
       flex: 1;
       padding: 0.7rem;
@@ -761,10 +887,12 @@
       color: white;
       font-size: 0.9rem;
     }
+
     .newsletter-form input:focus {
       outline: none;
       box-shadow: 0 0 0 2px #0066ff;
     }
+
     .newsletter-form button {
       background: #0066ff;
       border: none;
@@ -774,6 +902,7 @@
       cursor: pointer;
       transition: 0.2s;
     }
+
     .newsletter-form button:hover {
       background: #0052cc;
       transform: scale(1.02);
@@ -784,6 +913,7 @@
       gap: 1rem;
       margin-top: 1rem;
     }
+
     .social-icons a {
       background: #1e293b;
       width: 36px;
@@ -795,6 +925,7 @@
       transition: 0.2s;
       color: #cbd5e6;
     }
+
     .social-icons a:hover {
       background: #0066ff;
       transform: translateY(-3px);
@@ -804,19 +935,23 @@
     .payment-methods {
       margin-top: 1.5rem;
     }
+
     .payment-methods p {
       font-size: 0.8rem;
       margin-bottom: 0.5rem;
     }
+
     .payment-icons {
       display: flex;
       gap: 0.8rem;
       font-size: 1.6rem;
       color: #94a3b8;
     }
+
     .payment-icons i {
       transition: 0.2s;
     }
+
     .payment-icons i:hover {
       color: white;
     }
@@ -829,11 +964,13 @@
       padding: 1.5rem 0;
       font-size: 0.85rem;
     }
+
     .footer-bottom a {
       color: #94a3b8;
       text-decoration: none;
       margin: 0 0.8rem;
     }
+
     .footer-bottom a:hover {
       color: white;
     }
@@ -865,6 +1002,7 @@
       z-index: 99;
       text-decoration: none;
     }
+
     .float-wa:hover {
       transform: scale(1.08);
       background: #20b359;
@@ -878,11 +1016,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 2000;
       align-items: center;
       justify-content: center;
     }
+
     .modal-content {
       background: white;
       max-width: 450px;
@@ -891,13 +1030,16 @@
       border-radius: 32px;
       text-align: center;
     }
-    .modal-content input, .modal-content textarea {
+
+    .modal-content input,
+    .modal-content textarea {
       width: 100%;
       margin: 0.8rem 0;
       padding: 0.8rem;
       border-radius: 60px;
       border: 1px solid #ddd;
     }
+
     .modal-content button {
       background: #0066ff;
       color: white;
@@ -908,6 +1050,7 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     .close-modal {
       float: right;
       font-size: 1.5rem;
@@ -915,15 +1058,17 @@
     }
 
     /* ========== COMPREHENSIVE MEDIA QUERIES FOR FULL RESPONSIVENESS ========== */
-    
+
     /* Large tablets and small desktops (1024px and below) */
     @media (max-width: 1024px) {
       .container {
         padding: 0 1.8rem;
       }
+
       .slide-content h2 {
         font-size: 2.8rem;
       }
+
       .section-title {
         font-size: 2.2rem;
       }
@@ -934,50 +1079,64 @@
       .nav-links {
         gap: 1.2rem;
       }
+
       .slide-content h2 {
         font-size: 2.2rem;
       }
+
       .slide-content p {
         font-size: 1rem;
       }
+
       .slide-btn {
         padding: 10px 28px;
         font-size: 0.9rem;
       }
+
       section {
         padding: 4rem 0;
       }
+
       .section-title {
         font-size: 2rem;
       }
+
       .section-sub {
         font-size: 1rem;
         margin-bottom: 2.5rem;
       }
+
       .services-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 1.5rem;
       }
+
       .service-card {
         padding: 1.5rem;
       }
+
       .process-flow {
         flex-wrap: wrap;
         justify-content: center;
       }
+
       .process-card {
         max-width: 210px;
       }
+
       .step-arrow {
         margin: 0 0.5rem;
         transform: rotate(0deg);
       }
+
       .leads-content h2 {
         font-size: 1.8rem;
       }
+
       .leads-content p {
         font-size: 1rem;
       }
+
       .badge {
         padding: 0.6rem 1rem;
         font-size: 0.75rem;
@@ -989,6 +1148,7 @@
       .menu-toggle {
         display: block;
       }
+
       .nav-links {
         display: none;
         width: 100%;
@@ -1001,163 +1161,209 @@
         gap: 1rem;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
       }
+
       .nav-links.active {
         display: flex;
       }
+
       .nav-links a {
         padding: 0.5rem 0;
       }
+
       .slider-section {
         height: 80vh;
       }
+
       .slide-content h2 {
         font-size: 1.8rem;
       }
+
       .slide-content p {
         font-size: 0.9rem;
         margin-bottom: 1.5rem;
       }
+
       .slide-btn {
         padding: 10px 24px;
         font-size: 0.85rem;
       }
+
       .container {
         padding: 0 1.2rem;
       }
+
       section {
         padding: 3rem 0;
       }
+
       .section-title {
         font-size: 1.8rem;
       }
+
       .section-sub {
         font-size: 0.9rem;
         margin-bottom: 2rem;
       }
+
       .services-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
       }
+
       .service-card {
         padding: 1.2rem;
       }
+
       .card-icon {
         font-size: 2.2rem;
       }
+
       .service-card h3 {
         font-size: 1.3rem;
       }
+
       .work-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
       }
+
       .about-flex {
         flex-direction: column;
         gap: 2rem;
       }
+
       .about-text {
         text-align: center;
       }
+
       .about-text .section-title {
         text-align: center !important;
       }
+
       .testimonial-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
       }
+
       .process-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
       }
+
       .process-flow {
         flex-direction: column;
         gap: 0.2rem;
       }
+
       .step-arrow {
         margin: 0.2rem 0;
         transform: rotate(90deg);
         font-size: 1.3rem;
       }
+
       .process-card {
         max-width: 100%;
         width: 100%;
       }
+
       .leads-section {
         padding: 2rem 1.5rem;
       }
+
       .leads-grid {
         flex-direction: column;
         text-align: center;
       }
+
       .leads-content {
         text-align: center;
       }
+
       .leads-content h2 {
         font-size: 1.5rem;
       }
+
       .awards-badges {
         justify-content: center;
       }
+
       .badge {
         font-size: 0.7rem;
         padding: 0.5rem 0.8rem;
       }
+
       .clients-section h3 {
         font-size: 1.5rem;
       }
+
       .logo-item {
         width: 130px;
         padding: 0.7rem 0.3rem;
       }
+
       .logo-item i {
         font-size: 2rem;
       }
+
       .logo-item span {
         font-size: 0.8rem;
       }
+
       .slider-container::before,
       .slider-container::after {
         width: 30px;
       }
+
       .process-header h2 {
         font-size: 1.6rem;
       }
+
       .process-header p {
         font-size: 0.9rem;
       }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
       }
+
       .footer-col h4:after {
         left: 50%;
         transform: translateX(-50%);
       }
+
       .footer-col .social-icons {
         justify-content: center;
       }
+
       .footer-col .payment-icons {
         justify-content: center;
       }
+
       .contact-detail {
         justify-content: center;
       }
+
       .newsletter-form {
         max-width: 300px;
         margin: 1rem auto 0;
       }
+
       .footer-bottom {
         flex-direction: column;
         gap: 0.8rem;
         text-align: center;
       }
+
       .footer-bottom div:first-child {
         order: 2;
       }
+
       .footer-bottom div:last-child {
         order: 1;
       }
+
       .float-wa {
         width: 48px;
         height: 48px;
@@ -1165,239 +1371,434 @@
         bottom: 20px;
         right: 20px;
       }
+
       .modal-content {
         padding: 1.5rem;
+      }
+
+      /* Adjust logo size on mobile */
+      .logo-img {
+        height: 50px;
       }
     }
 
     /* Small mobile devices (480px and below) */
     @media (max-width: 480px) {
       .logo-img {
-        width: 40px;
-        height: 40px;
+        height: 45px;
       }
-      .logo-text h1 {
-        font-size: 1.1rem;
-      }
-      .logo-text span {
-        font-size: 0.6rem;
-      }
+
       .slide-content h2 {
         font-size: 1.5rem;
       }
+
       .slide-content p {
         font-size: 0.85rem;
       }
+
       .slide-btn {
         padding: 8px 20px;
         font-size: 0.8rem;
       }
+
       .section-title {
         font-size: 1.5rem;
       }
+
       .service-card h3 {
         font-size: 1.2rem;
       }
+
       .process-card h3 {
         font-size: 1.2rem;
       }
+
       .process-card p {
         font-size: 0.85rem;
       }
+
       .leads-content h2 {
         font-size: 1.3rem;
       }
+
       .quote-btn {
         padding: 10px 24px;
         font-size: 0.9rem;
       }
+
       .badge {
         font-size: 0.65rem;
       }
+
       .clients-section h3 {
         font-size: 1.3rem;
       }
+
       .clients-sub {
         font-size: 0.85rem;
       }
+
       .logo-item {
         width: 110px;
       }
+
       .logo-item i {
         font-size: 1.6rem;
       }
+
       .logo-item span {
         font-size: 0.7rem;
       }
     }
+    /* ========== IMPROVED TESTIMONIALS SECTION ========== */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(0, 102, 255, 0.15);
+  border-color: rgba(0, 102, 255, 0.2);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0066ff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover img {
+  transform: scale(1.05);
+  border-color: #ff8c42;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.testimonial-card p::before {
+  content: '"';
+  font-size: 2.5rem;
+  color: #0066ff;
+  opacity: 0.2;
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  font-family: serif;
+}
+
+.testimonial-card p::after {
+  content: '"';
+  font-size: 2.5rem;
+  color: #0066ff;
+  opacity: 0.2;
+  position: absolute;
+  bottom: -25px;
+  right: -10px;
+  font-family: serif;
+}
+
+.client-name {
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.client-name::before {
+  content: "— ";
+  font-weight: normal;
+  color: #0066ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  
+  .testimonial-card img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .testimonial-card p {
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-card p::before,
+  .testimonial-card p::after {
+    font-size: 2rem;
+    opacity: 0.15;
+  }
+}
   </style>
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container nav-wrapper">
-    <div class="logo-area">
-      <img src="logo.jpg" alt="AdNexa Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/60x60/0B2B5E/white?text=AN'">
-      <div class="logo-text">
-        <h1>AdNexa Technologies</h1>
-        <span>Pvt. Ltd.</span>
+  <header class="header">
+    <div class="container nav-wrapper">
+      <div class="logo-area">
+        <img src="logo bg.png" alt="AdNexa Logo" class="logo-img">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#process">Process</a>
+        <a href="./certificate.html">Certificate Verification</a>
       </div>
     </div>
-    <div class="menu-toggle" id="mobile-menu">
-      <i class="fas fa-bars"></i>
-    </div>
-    <div class="nav-links" id="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#work">Our Work</a>
-      <a href="#about">About</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#process">Process</a>
-      <a href="./certificate.html">Certificate Verification</a>
-    </div>
-  </div>
-</header>
+  </header>
 
-<!-- Hero Slider Fullscreen -->
-<section id="home" class="slider-section">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <h2>Web & Ecommerce Excellence</h2>
-          <p>Custom websites, scalable ecommerce platforms — from startups to global brands.</p>
-          <a href="#services" class="slide-btn">Explore Services</a>
+  <!-- Hero Slider Fullscreen -->
+  <section id="home" class="slider-section">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"
+          style="background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Web & Ecommerce Excellence</h2>
+            <p>Custom websites, scalable ecommerce platforms — from startups to global brands.</p>
+            <a href="#services" class="slide-btn">Explore Services</a>
+          </div>
+        </div>
+        <div class="swiper-slide"
+          style="background-image: url('https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Award Winning Digital Agency</h2>
+            <p>Recognized by Clutch, GoodFirms & HubSpot for excellence in digital marketing.</p>
+            <a href="#leads" class="slide-btn">Request Free Quote</a>
+          </div>
+        </div>
+        <div class="swiper-slide"
+          style="background-image: url('https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Data-Driven Marketing</h2>
+            <p>SEO, Social Media, PPC — strategies that deliver measurable ROI.</p>
+            <a href="#process" class="slide-btn">Our Process</a>
+          </div>
         </div>
       </div>
-      <div class="swiper-slide" style="background-image: url('https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <h2>Award Winning Digital Agency</h2>
-          <p>Recognized by Clutch, GoodFirms & HubSpot for excellence in digital marketing.</p>
-          <a href="#leads" class="slide-btn">Request Free Quote</a>
-        </div>
-      </div>
-      <div class="swiper-slide" style="background-image: url('https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <h2>Data-Driven Marketing</h2>
-          <p>SEO, Social Media, PPC — strategies that deliver measurable ROI.</p>
-          <a href="#process" class="slide-btn">Our Process</a>
-        </div>
-      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
+  </section>
 
-<!-- Services from data.json -->
-<section id="services">
-  <div class="container">
-    <h2 class="section-title">Our <span style="color:#0066ff;">Core Services</span></h2>
-    <p class="section-sub">Tailored digital solutions that drive growth and engagement.</p>
-    <div id="services-container" class="services-grid">
-      <div class="loading-spinner" style="text-align:center; padding: 3rem;"><i class="fas fa-spinner fa-pulse"></i> Loading services...</div>
-    </div>
-  </div>
-</section>
-
-<!-- Our Work Portfolio -->
-<section id="work" style="background: #f8fafc;">
-  <div class="container">
-    <h2 class="section-title">Recent <span style="color:#0066ff;">Projects</span></h2>
-    <p class="section-sub">Real results for real businesses — see what we've built.</p>
-    <div class="work-grid">
-      <div class="work-item"><img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ecommerce"><div class="work-info"><h3>Luxury Fashion E‑commerce</h3><p>High‑performance Shopify store with 300% ROI increase.</p></div></div>
-      <div class="work-item"><img src="https://images.pexels.com/photos/2187175/pexels-photo-2187175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="corporate"><div class="work-info"><h3>Corporate Web Portal</h3><p>Custom CRM + website for a logistics leader.</p></div></div>
-      <div class="work-item"><img src="https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg?auto=compress&cs=tinysrgb&w=600" alt="seo"><div class="work-info"><h3>SEO Domination</h3><p>Ranked #1 for 30+ keywords in 6 months.</p></div></div>
-      <div class="work-item"><img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600" alt="social"><div class="work-info"><h3>Social Media Growth</h3><p>+250% engagement for a beauty brand.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Our Digital Marketing Work Process (5 Steps) -->
-<div class="container">
-  <!-- Pure CSS Infinite Client Brand Logo Slider Section -->
-  <div class="clients-section">
-    <h3>Trusted by industry leaders</h3>
-    <div class="clients-sub">Innovative brands that drive results with us</div>
-    <div class="slider-container">
-      <div class="logo-track" id="logoSliderTrack">
-        <!-- First set of brand logos (6 unique brands) -->
-        <div class="logo-item"><i class="fab fa-google"></i><span>Google</span><small>digital partner</small></div>
-        <div class="logo-item"><i class="fab fa-microsoft"></i><span>Microsoft</span><small>AI cloud</small></div>
-        <div class="logo-item"><i class="fab fa-amazon"></i><span>Amazon</span><small>ecom leader</small></div>
-        <div class="logo-item"><i class="fab fa-apple"></i><span>Apple</span><small>innovation</small></div>
-        <div class="logo-item"><i class="fab fa-salesforce"></i><span>Salesforce</span><small>CRM expert</small></div>
-        <div class="logo-item"><i class="fab fa-slack"></i><span>Slack</span><small>collab hub</small></div>
-        <!-- Duplicate set for seamless infinite loop -->
-        <div class="logo-item"><i class="fab fa-google"></i><span>Google</span><small>digital partner</small></div>
-        <div class="logo-item"><i class="fab fa-microsoft"></i><span>Microsoft</span><small>AI cloud</small></div>
-        <div class="logo-item"><i class="fab fa-amazon"></i><span>Amazon</span><small>ecom leader</small></div>
-        <div class="logo-item"><i class="fab fa-apple"></i><span>Apple</span><small>innovation</small></div>
-        <div class="logo-item"><i class="fab fa-salesforce"></i><span>Salesforce</span><small>CRM expert</small></div>
-        <div class="logo-item"><i class="fab fa-slack"></i><span>Slack</span><small>collab hub</small></div>
-      </div>
-    </div>
-  </div>
-  <hr class="divider">
-  
-  <!-- Testimonials -->
-  <section id="testimonials" style="background: #f9fafb;">
+  <!-- Services from data.json -->
+  <section id="services">
     <div class="container">
-      <h2 class="section-title">What <span style="color:#0066ff;">Clients Say</span></h2>
-      <p class="section-sub">Trusted by businesses worldwide for delivering exceptional digital experiences.</p>
-      <div class="testimonial-grid">
-        <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>“AdNexa transformed our online presence. The SEO strategy increased our organic traffic by 200% within 6 months. Highly recommended!”</p><div class="client-name">— Sarah Johnson, CEO of LuxeStyle</div></div>
-        <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>“Their ecommerce development team built a seamless Shopify store that boosted our sales by 150%. Professional, creative, and results-driven.”</p><div class="client-name">— Michael Chen, Founder of UrbanCart</div></div>
-        <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>“Amazing support and cutting-edge marketing campaigns. Our brand visibility skyrocketed thanks to AdNexa's PPC and social media expertise.”</p><div class="client-name">— Priya Sharma, Marketing Head, Zenith Corp</div></div>
+      <h2 class="section-title">Our <span style="color:#0066ff;">Core Services</span></h2>
+      <p class="section-sub">Tailored digital solutions that drive growth and engagement.</p>
+      <div id="services-container" class="services-grid">
+        <div class="loading-spinner" style="text-align:center; padding: 3rem;"><i class="fas fa-spinner fa-pulse"></i>
+          Loading services...</div>
       </div>
     </div>
   </section>
-  
-  <div class="process-header">
-    <h2>Our Digital Marketing Work Process</h2>
-    <p>A structured approach to deliver measurable success for your brand.</p>
+
+  <!-- Our Work Portfolio -->
+  <section id="work" style="background: #f8fafc;">
+    <div class="container">
+      <h2 class="section-title">Recent <span style="color:#0066ff;">Projects</span></h2>
+      <p class="section-sub">Real results for real businesses — see what we've built.</p>
+      <div class="work-grid">
+        <div class="work-item"><img
+            src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="ecommerce">
+          <div class="work-info">
+            <h3>Luxury Fashion E‑commerce</h3>
+            <p>High‑performance Shopify store with 300% ROI increase.</p>
+          </div>
+        </div>
+        <div class="work-item"><img
+            src="https://www.scnsoft.com/blog-pictures/web-portals/corporate-portal.png"
+            alt="corporate">
+          <div class="work-info">
+            <h3>Corporate Web Portal</h3>
+            <p>Custom CRM + website for a logistics leader.</p>
+          </div>
+        </div>
+        <div class="work-item"><img
+            src="https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="seo">
+          <div class="work-info">
+            <h3>SEO Domination</h3>
+            <p>Ranked #1 for 30+ keywords in 6 months.</p>
+          </div>
+        </div>
+        <div class="work-item"><img
+            src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="social">
+          <div class="work-info">
+            <h3>Social Media Growth</h3>
+            <p>+250% engagement for a beauty brand.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Digital Marketing Work Process (5 Steps) -->
+  <div class="container">
+    <!-- Pure CSS Infinite Client Brand Logo Slider Section -->
+    <div class="clients-section">
+      <h3>Trusted by industry leaders</h3>
+      <div class="clients-sub">Innovative brands that drive results with us</div>
+      <div class="slider-container">
+        <div class="logo-track" id="logoSliderTrack">
+          <!-- First set of brand logos (6 unique brands) -->
+          <div class="logo-item"><i class="fab fa-google"></i><span>Google</span><small>digital partner</small></div>
+          <div class="logo-item"><i class="fab fa-microsoft"></i><span>Microsoft</span><small>AI cloud</small></div>
+          <div class="logo-item"><i class="fab fa-amazon"></i><span>Amazon</span><small>ecom leader</small></div>
+          <div class="logo-item"><i class="fab fa-apple"></i><span>Apple</span><small>innovation</small></div>
+          <div class="logo-item"><i class="fab fa-salesforce"></i><span>Salesforce</span><small>CRM expert</small></div>
+          <div class="logo-item"><i class="fab fa-slack"></i><span>Slack</span><small>collab hub</small></div>
+          <!-- Duplicate set for seamless infinite loop -->
+          <div class="logo-item"><i class="fab fa-google"></i><span>Google</span><small>digital partner</small></div>
+          <div class="logo-item"><i class="fab fa-microsoft"></i><span>Microsoft</span><small>AI cloud</small></div>
+          <div class="logo-item"><i class="fab fa-amazon"></i><span>Amazon</span><small>ecom leader</small></div>
+          <div class="logo-item"><i class="fab fa-apple"></i><span>Apple</span><small>innovation</small></div>
+          <div class="logo-item"><i class="fab fa-salesforce"></i><span>Salesforce</span><small>CRM expert</small></div>
+          <div class="logo-item"><i class="fab fa-slack"></i><span>Slack</span><small>collab hub</small></div>
+        </div>
+      </div>
+    </div>
+    <hr class="divider">
+
+    <!-- Testimonials -->
+    <section id="testimonials" style="background: #f9fafb;">
+      <div class="container">
+        <h2 class="section-title">What <span style="color:#0066ff;">Clients Say</span></h2>
+        <p class="section-sub">Trusted by businesses worldwide for delivering exceptional digital experiences.</p>
+        <div class="testimonial-grid">
+          <div class="testimonial-card"><img src="https://img.freepik.com/free-photo/handsome-young-cheerful-man-with-arms-crossed_171337-1073.jpg?semt=ais_hybrid&w=740&q=80"  style="height: 80px; border-radius: 50%;">
+            <p>“AdNexa transformed our online presence. The SEO strategy increased our organic traffic by 200% within 6
+              months. Highly recommended!”</p>
+            <div class="client-name">— Sarah Johnson, CEO of LuxeStyle</div>
+          </div>
+          <div class="testimonial-card"><img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt=""style="height: 80px; border-radius: 50%;">
+            <p>“Their ecommerce development team built a seamless Shopify store that boosted our sales by 150%.
+              Professional, creative, and results-driven.”</p>
+            <div class="client-name">— Michael Chen, Founder of UrbanCart</div>
+          </div>
+          <div class="testimonial-card"><img src="https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg" alt="" style="height: 80px; border-radius: 50%;">
+            <p>“Amazing support and cutting-edge marketing campaigns. Our brand visibility skyrocketed thanks to
+              AdNexa's PPC and social media expertise.”</p>
+            <div class="client-name">— Priya Sharma, Marketing Head, Zenith Corp</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="process-header">
+      <h2>Our Digital Marketing Work Process</h2>
+      <p>A structured approach to deliver measurable success for your brand.</p>
+    </div>
+
+    <!-- Process flow including arrows between steps -->
+    <div class="process-flow">
+      <div class="process-card">
+        <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Identify</h3>
+        <p>Find opportunities, plan, chart goals and create a roadmap.</p>
+      </div>
+      <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="process-card">
+        <div class="step-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Execute</h3>
+        <p>Deploy the strategies, improve engagement, target better.</p>
+      </div>
+      <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="process-card">
+        <div class="step-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Discover</h3>
+        <p>Meet clients, understand their demand, finalize the project.</p>
+      </div>
+      <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="process-card">
+        <div class="step-icon"><i class="fas fa-funnel-dollar"></i></div>
+        <h3>Strategize</h3>
+        <p>Gather data, map customer journey, make sales funnel.</p>
+      </div>
+      <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="process-card">
+        <div class="step-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Drive result</h3>
+        <p>Analyse the result, fix the loopholes, re-strategize, optimize ROI.</p>
+      </div>
+    </div>
   </div>
 
-  <!-- Process flow including arrows between steps -->
-  <div class="process-flow">
-    <div class="process-card"><div class="step-icon"><i class="fas fa-chart-line"></i></div><h3>Identify</h3><p>Find opportunities, plan, chart goals and create a roadmap.</p></div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card"><div class="step-icon"><i class="fas fa-rocket"></i></div><h3>Execute</h3><p>Deploy the strategies, improve engagement, target better.</p></div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card"><div class="step-icon"><i class="fas fa-handshake"></i></div><h3>Discover</h3><p>Meet clients, understand their demand, finalize the project.</p></div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card"><div class="step-icon"><i class="fas fa-funnel-dollar"></i></div><h3>Strategize</h3><p>Gather data, map customer journey, make sales funnel.</p></div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card"><div class="step-icon"><i class="fas fa-chart-simple"></i></div><h3>Drive result</h3><p>Analyse the result, fix the loopholes, re-strategize, optimize ROI.</p></div>
-  </div>
-</div>
-
-<!-- About Section -->
-<section id="about">
+  <!-- About Section -->
+  <section id="about">
   <div class="container about-flex">
     <div class="about-text">
-      <h2 class="section-title" style="text-align: left;">About <span style="color:#0066ff;">AdNexa</span></h2>
-      <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 1.2rem;">AdNexa Technologies Pvt. Ltd. is an award-winning digital marketing company in Jaipur, blending creativity with data. We help small businesses to large enterprises build powerful web solutions, dominate search engines, and engage audiences through strategic marketing.</p>
-      <p style="margin-bottom: 1.5rem;">Founded with a vision to deliver measurable growth, our team of developers, strategists, and creatives work relentlessly to turn ideas into revenue.</p>
-      <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
-        <div><i class="fas fa-trophy" style="color:#0066ff;"></i> 150+ projects</div>
-        <div><i class="fas fa-smile" style="color:#0066ff;"></i> 98% satisfaction</div>
-        <div><i class="fas fa-globe" style="color:#0066ff;"></i> Global presence</div>
+      <h2 class="section-title">About <span style="color:#0066ff;">AdNexa</span></h2>
+      <p>AdNexa Technologies Pvt. Ltd. is an award-winning digital marketing company in Bihar, blending creativity with data. We help small businesses to large enterprises build powerful web solutions, dominate search engines, and engage audiences through strategic marketing.</p>
+      <p>Founded with a vision to deliver measurable growth, our team of developers, strategists, and creatives work relentlessly to turn ideas into revenue.</p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+          <div class="stat-content">
+            <span class="stat-number" data-count="150">150+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-smile"></i></div>
+          <div class="stat-content">
+            <span class="stat-number" data-count="98">98%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-globe"></i></div>
+          <div class="stat-content">
+            <span class="stat-number" data-count="15">15+</span>
+            <span class="stat-label">Countries Served</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="about-image">
-      <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="AdNexa team" onerror="this.src='https://placehold.co/400x300/0B2B5E/white?text=AdNexa+Team'">
+      <img src="https://wikiprospects.com/wp-content/uploads/2024/04/explore-careers.png" alt="AdNexa team">
     </div>
   </div>
 </section>
 
-<!-- Want More Leads? Section -->
-<!-- <section id="leads">
+  <!-- Want More Leads? Section -->
+  <!-- <section id="leads">
   <div class="container">
     <div class="leads-section">
       <div class="leads-grid">
@@ -1418,183 +1819,220 @@
   </div>
 </section> -->
 
-<!-- ========== ENHANCED FOOTER ========== -->
-<footer>
-  <div class="container">
-    <div class="footer-main">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>AdNexa Technologies</h4>
-          <p>Award-winning digital marketing & development agency. We craft digital success stories for brands worldwide.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+  <!-- ========== ENHANCED FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>AdNexa Technologies</h4>
+            <p>Award-winning digital marketing & development agency. We craft digital success stories for brands
+              worldwide.</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="payment-methods">
+              <p>Secure payments</p>
+              <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+              </div>
+            </div>
           </div>
-          <div class="payment-methods">
-            <p>Secure payments</p>
-            <div class="payment-icons">
-              <i class="fab fa-cc-visa"></i>
-              <i class="fab fa-cc-mastercard"></i>
-              <i class="fab fa-cc-amex"></i>
-              <i class="fab fa-cc-paypal"></i>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#work">Our Work</a>
+            <a href="#about">About Us</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#process">Our Process</a>
+            <a href="./certificate.html">Certificate Verification</a>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#">Web Development</a>
+            <a href="#">SEO & SEM</a>
+            <a href="#">Social Media Marketing</a>
+            <a href="#">Google Ads</a>
+            <a href="#">Content Writing</a>
+            <a href="#">Email Marketing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> Bihar, patna, India</div>
+            <div class="contact-detail"><i class="fas fa-phone-alt"></i> +91 98765 43210</div>
+            <div class="contact-detail"><i class="fas fa-envelope"></i> hello@adnexatech.com</div>
+            <div class="contact-detail"><i class="fab fa-whatsapp"></i> +91 98765 43210</div>
+            <h4 style="margin-top: 1.5rem;">Newsletter</h4>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Your email" id="newsEmail">
+              <button id="newsBtn"><i class="fas fa-paper-plane"></i></button>
             </div>
           </div>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#work">Our Work</a>
-          <a href="#about">About Us</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#process">Our Process</a>
-          <a href="./certificate.html">Certificate Verification</a>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <a href="#">Web Development</a>
-          <a href="#">SEO & SEM</a>
-          <a href="#">Social Media Marketing</a>
-          <a href="#">Google Ads</a>
-          <a href="#">Content Writing</a>
-          <a href="#">Email Marketing</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact Info</h4>
-          <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</div>
-          <div class="contact-detail"><i class="fas fa-phone-alt"></i> +91 98765 43210</div>
-          <div class="contact-detail"><i class="fas fa-envelope"></i> hello@adnexatech.com</div>
-          <div class="contact-detail"><i class="fab fa-whatsapp"></i> +91 98765 43210</div>
-          <h4 style="margin-top: 1.5rem;">Newsletter</h4>
-          <div class="newsletter-form">
-            <input type="email" placeholder="Your email" id="newsEmail">
-            <button id="newsBtn"><i class="fas fa-paper-plane"></i></button>
+        <div class="footer-bottom">
+          <div>© 2025 AdNexa Technologies Pvt. Ltd. All rights reserved.</div>
+          <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div>© 2025 AdNexa Technologies Pvt. Ltd. All rights reserved.</div>
-        <div>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-        </div>
-      </div>
+    </div>
+    <div class="copyright">
+      Award Winning Digital Agency | Recognized by Clutch, GoodFirms & HubSpot
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919999999999?text=Hello%20AdNexa%20team!%20I%20need%20assistance." class="float-wa"
+    target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Modal for Free Quote -->
+  <div id="quoteModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Request a Free Quote</h3>
+      <input type="text" id="quoteName" placeholder="Your Name">
+      <input type="email" id="quoteEmail" placeholder="Email Address">
+      <input type="tel" id="quotePhone" placeholder="Phone Number">
+      <textarea rows="2" id="quoteMsg" placeholder="Tell us about your project..."></textarea>
+      <button id="submitQuote">Send Request</button>
     </div>
   </div>
-  <div class="copyright">
-    Award Winning Digital Agency | Recognized by Clutch, GoodFirms & HubSpot
-  </div>
-</footer>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/919999999999?text=Hello%20AdNexa%20team!%20I%20need%20assistance." class="float-wa" target="_blank" rel="noopener noreferrer">
-  <i class="fab fa-whatsapp"></i>
-</a>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Animated counters for about section
+const counters = document.querySelectorAll('.stat-number');
+const speed = 200;
 
-<!-- Modal for Free Quote -->
-<div id="quoteModal" class="modal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h3>Request a Free Quote</h3>
-    <input type="text" id="quoteName" placeholder="Your Name">
-    <input type="email" id="quoteEmail" placeholder="Email Address">
-    <input type="tel" id="quotePhone" placeholder="Phone Number">
-    <textarea rows="2" id="quoteMsg" placeholder="Tell us about your project..."></textarea>
-    <button id="submitQuote">Send Request</button>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  // Slider
-  const swiper = new Swiper('.mySwiper', {
-    loop: true, autoplay: { delay: 5000, disableOnInteraction: false },
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
-  });
-
-  // Mobile menu
-  const menuToggle = document.getElementById('mobile-menu');
-  const navLinks = document.getElementById('nav-links');
-  menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-  document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
-
-  // Load services from data.json
-  const servicesContainer = document.getElementById('services-container');
-  async function loadServices() {
-    try {
-      const res = await fetch('data.json');
-      if (!res.ok) throw new Error();
-      const services = await res.json();
-      renderServices(services);
-    } catch (err) {
-      const fallback = [
-        { "title":"Website Development", "description":"We provide website development and Ecommerce development services for small business to big brands.", "icon":"fas fa-laptop-code" },
-        { "title":"Social Media Marketing", "description":"We provide Social Media Marketing and Management services to help businesses increase online presence.", "icon":"fas fa-share-alt" },
-        { "title":"Search Engine Marketing", "description":"Our SEM services help businesses reach goals via paid advertising & organic SERP.", "icon":"fas fa-chart-line" },
-        { "title":"Search Engine Optimization", "description":"We provide SEO services to improve online visibility and attract organic traffic.", "icon":"fas fa-search" },
-        { "title":"Google Ads", "description":"PPC experts create effective campaigns on Google Ads, Bing, and social platforms.", "icon":"fab fa-google" },
-        { "title":"Local SEO", "description":"Optimize website & online presence for local search queries.", "icon":"fas fa-map-marker-alt" },
-        { "title":"Content Writing", "description":"Professional content writing to reach target audience and marketing goals.", "icon":"fas fa-pen-fancy" },
-        { "title":"Email Marketing", "description":"Engage customers with powerful email campaigns and automation.", "icon":"fas fa-envelope" }
-      ];
-      renderServices(fallback);
+const animateCounter = (counter) => {
+  const target = parseInt(counter.getAttribute('data-count'));
+  let count = 0;
+  const increment = target / speed;
+  
+  const updateCount = () => {
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.ceil(count) + (counter.innerText.includes('+') ? '+' : '%');
+      setTimeout(updateCount, 20);
+    } else {
+      counter.innerText = target + (counter.innerText.includes('+') ? '+' : '%');
     }
-  }
-  function renderServices(services) {
-    servicesContainer.innerHTML = '';
-    services.forEach(s => {
-      const card = document.createElement('div');
-      card.className = 'service-card';
-      card.innerHTML = `<div class="card-icon"><i class="${s.icon}"></i></div><h3>${escapeHtml(s.title)}</h3><p>${escapeHtml(s.description)}</p>`;
-      servicesContainer.appendChild(card);
+  };
+  updateCount();
+};
+
+// Intersection Observer to trigger counters when section is visible
+const aboutSection = document.getElementById('about');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => animateCounter(counter));
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+if (aboutSection) observer.observe(aboutSection);
+    // Slider
+    const swiper = new Swiper('.mySwiper', {
+      loop: true, autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
     });
-  }
-  function escapeHtml(str) { return str.replace(/[&<>]/g, function(m) { if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
-  loadServices();
 
-  // Quote Modal
-  const modal = document.getElementById('quoteModal');
-  const openBtn = document.getElementById('openQuoteModal');
-  const closeSpan = document.querySelector('.close-modal');
-  if (openBtn) openBtn.onclick = () => modal.style.display = 'flex';
-  if (closeSpan) closeSpan.onclick = () => modal.style.display = 'none';
-  window.onclick = (e) => { if (e.target == modal) modal.style.display = 'none'; };
-  const submitBtn = document.getElementById('submitQuote');
-  if (submitBtn) {
-    submitBtn.onclick = () => {
-      alert('Thank you! Your quote request has been sent. We will contact you shortly.');
-      modal.style.display = 'none';
-      document.getElementById('quoteName').value = '';
-      document.getElementById('quoteEmail').value = '';
-      document.getElementById('quotePhone').value = '';
-      document.getElementById('quoteMsg').value = '';
-    };
-  }
+    // Mobile menu
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
 
-  // Newsletter
-  const newsBtn = document.getElementById('newsBtn');
-  if (newsBtn) {
-    newsBtn.onclick = () => {
-      const email = document.getElementById('newsEmail').value;
-      if(email) alert(`Thanks for subscribing! Updates will be sent to ${email}`);
-      else alert('Please enter a valid email');
-    };
-  }
-
-  // Logo fallback
-  document.querySelectorAll('img[src="image.png"]').forEach(img => {
-    img.onerror = function() { if(!this.dataset.fallback) { this.dataset.fallback='true'; this.src='https://placehold.co/60x60/0B2B5E/white?text=AN'; } };
-  });
-  (function() {
-    const track = document.getElementById('logoSliderTrack');
-    if (track) {
-      track.style.transform = 'translateZ(0)';
+    // Load services from data.json
+    const servicesContainer = document.getElementById('services-container');
+    async function loadServices() {
+      try {
+        const res = await fetch('data.json');
+        if (!res.ok) throw new Error();
+        const services = await res.json();
+        renderServices(services);
+      } catch (err) {
+        const fallback = [
+          { "title": "Website Development", "description": "We provide website development and Ecommerce development services for small business to big brands.", "icon": "fas fa-laptop-code" },
+          { "title": "Social Media Marketing", "description": "We provide Social Media Marketing and Management services to help businesses increase online presence.", "icon": "fas fa-share-alt" },
+          { "title": "Search Engine Marketing", "description": "Our SEM services help businesses reach goals via paid advertising & organic SERP.", "icon": "fas fa-chart-line" },
+          { "title": "Search Engine Optimization", "description": "We provide SEO services to improve online visibility and attract organic traffic.", "icon": "fas fa-search" },
+          { "title": "Google Ads", "description": "PPC experts create effective campaigns on Google Ads, Bing, and social platforms.", "icon": "fab fa-google" },
+          { "title": "Local SEO", "description": "Optimize website & online presence for local search queries.", "icon": "fas fa-map-marker-alt" },
+          { "title": "Content Writing", "description": "Professional content writing to reach target audience and marketing goals.", "icon": "fas fa-pen-fancy" },
+          { "title": "Email Marketing", "description": "Engage customers with powerful email campaigns and automation.", "icon": "fas fa-envelope" },
+           { "title": "Website Development", "description": "We provide website development and Ecommerce development services for small business to big brands.", "icon": "fas fa-laptop-code" }
+        ];
+        renderServices(fallback);
+      }
     }
-  })();
-</script>
+    function renderServices(services) {
+      servicesContainer.innerHTML = '';
+      services.forEach(s => {
+        const card = document.createElement('div');
+        card.className = 'service-card';
+        card.innerHTML = `<div class="card-icon"><i class="${s.icon}"></i></div><h3>${escapeHtml(s.title)}</h3><p>${escapeHtml(s.description)}</p>`;
+        servicesContainer.appendChild(card);
+      });
+    }
+    function escapeHtml(str) { return str.replace(/[&<>]/g, function (m) { if (m === '&') return '&amp;'; if (m === '<') return '&lt;'; if (m === '>') return '&gt;'; return m; }); }
+    loadServices();
+
+    // Quote Modal
+    const modal = document.getElementById('quoteModal');
+    const openBtn = document.getElementById('openQuoteModal');
+    const closeSpan = document.querySelector('.close-modal');
+    if (openBtn) openBtn.onclick = () => modal.style.display = 'flex';
+    if (closeSpan) closeSpan.onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = 'none'; };
+    const submitBtn = document.getElementById('submitQuote');
+    if (submitBtn) {
+      submitBtn.onclick = () => {
+        alert('Thank you! Your quote request has been sent. We will contact you shortly.');
+        modal.style.display = 'none';
+        document.getElementById('quoteName').value = '';
+        document.getElementById('quoteEmail').value = '';
+        document.getElementById('quotePhone').value = '';
+        document.getElementById('quoteMsg').value = '';
+      };
+    }
+
+    // Newsletter
+    const newsBtn = document.getElementById('newsBtn');
+    if (newsBtn) {
+      newsBtn.onclick = () => {
+        const email = document.getElementById('newsEmail').value;
+        if (email) alert(`Thanks for subscribing! Updates will be sent to ${email}`);
+        else alert('Please enter a valid email');
+      };
+    }
+
+    // Logo fallback
+    document.querySelectorAll('img[src="image.png"]').forEach(img => {
+      img.onerror = function () { if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src = 'https://placehold.co/60x60/0B2B5E/white?text=AN'; } };
+    });
+    (function () {
+      const track = document.getElementById('logoSliderTrack');
+      if (track) {
+        track.style.transform = 'translateZ(0)';
+      }
+    })();
+  </script>
 </body>
+
 </html>
