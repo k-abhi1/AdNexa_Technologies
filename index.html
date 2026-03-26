@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Trionexa Technologies | Award Winning Digital Agency</title>
-  <link rel="icon" href="logo.jpg" type="image/x-icon">
+  <title> Trionexa Technologies Pvt.Ltd </title>
+  <link rel="icon" href="unnamed (1)-modified.png" type="image/x-icon">
   <!-- Google Fonts + Font Awesome + Swiper CSS -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
@@ -110,6 +110,17 @@
       color: #1f2937;
     }
 
+    .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
     .slider-section {
       width: 100%;
       height: 100vh;
@@ -182,6 +193,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -408,24 +420,58 @@
       .about-flex {
         gap: 2rem;
       }
+
       .about-text .section-title {
         text-align: center;
       }
+
       .about-text .section-title::after {
         left: 50%;
         transform: translateX(-50%);
       }
+
       .about-text p {
         text-align: center;
       }
+
       .about-stats {
         justify-content: center;
       }
+
       .stat-item {
         justify-content: center;
       }
     }
 
+    /* Process step icons with images */
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background: #eef3ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.step-icon img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+  .step-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .step-icon img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
     /* ===== TESTIMONIALS (unchanged) ===== */
     .testimonial-grid {
       display: grid;
@@ -514,10 +560,12 @@
       .testimonial-card {
         padding: 1.5rem;
       }
+
       .testimonial-card img {
         width: 70px;
         height: 70px;
       }
+
       .testimonial-card p {
         font-size: 0.9rem;
       }
@@ -617,10 +665,12 @@
       .process-flow {
         flex-direction: column;
       }
+
       .step-arrow {
         transform: rotate(90deg);
         margin: 0.2rem 0;
       }
+
       .process-card {
         max-width: 100%;
         width: 100%;
@@ -721,10 +771,48 @@
       color: #5b6e8c;
       margin-top: 4px;
     }
+    .logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 0.9rem 0.5rem;
+  transition: all 0.2s;
+  border: 1px solid #eef2ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+}
+
+.logo-item img {
+  max-width: 80px;
+  max-height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.6rem;
+}
+
+.logo-item span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1e293b;
+  letter-spacing: -0.2px;
+}
+
+.logo-item small {
+  font-size: 0.7rem;
+  color: #5b6e8c;
+  margin-top: 4px;
+}
 
     @keyframes infiniteScroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     hr.divider {
@@ -965,9 +1053,11 @@
       .container {
         padding: 0 1.8rem;
       }
+
       .slide-content h2 {
         font-size: 2.8rem;
       }
+
       .section-title {
         font-size: 2.2rem;
       }
@@ -977,26 +1067,33 @@
       .nav-links {
         gap: 1.2rem;
       }
+
       .slide-content h2 {
         font-size: 2.2rem;
       }
+
       .slide-content p {
         font-size: 1rem;
       }
+
       .slide-btn {
         padding: 10px 28px;
         font-size: 0.9rem;
       }
+
       section {
         padding: 4rem 0;
       }
+
       .section-title {
         font-size: 2rem;
       }
+
       .services-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 1.5rem;
       }
+
       .service-card {
         padding: 1.5rem;
       }
@@ -1006,6 +1103,7 @@
       .menu-toggle {
         display: block;
       }
+
       .nav-links {
         display: none;
         width: 100%;
@@ -1018,77 +1116,99 @@
         gap: 1rem;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
       }
+
       .nav-links.active {
         display: flex;
       }
+
       .slider-section {
         height: 80vh;
       }
+
       .slide-content h2 {
         font-size: 1.8rem;
       }
+
       .slide-content p {
         font-size: 0.9rem;
         margin-bottom: 1.5rem;
       }
+
       .slide-btn {
         padding: 10px 24px;
         font-size: 0.85rem;
       }
+
       .container {
         padding: 0 1.2rem;
       }
+
       section {
         padding: 3rem 0;
       }
+
       .section-title {
         font-size: 1.8rem;
       }
+
       .services-grid {
         grid-template-columns: 1fr;
       }
+
       .work-grid {
         grid-template-columns: 1fr;
       }
+
       .testimonial-grid {
         grid-template-columns: 1fr;
       }
+
       .logo-item {
         width: 130px;
       }
+
       .logo-item i {
         font-size: 2rem;
       }
+
       .logo-item span {
         font-size: 0.8rem;
       }
+
       .slider-container::before,
       .slider-container::after {
         width: 30px;
       }
+
       .process-header h2 {
         font-size: 1.6rem;
       }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
       }
+
       .footer-col h4:after {
         left: 50%;
         transform: translateX(-50%);
       }
+
       .contact-detail {
         justify-content: center;
       }
+
       .newsletter-form {
         max-width: 300px;
         margin: 1rem auto 0;
       }
+
       .footer-bottom {
         flex-direction: column;
         gap: 0.8rem;
       }
+
       .float-wa {
         width: 48px;
         height: 48px;
@@ -1096,6 +1216,7 @@
         bottom: 20px;
         right: 20px;
       }
+
       .logo-img {
         height: 50px;
       }
@@ -1105,25 +1226,32 @@
       .logo-img {
         height: 45px;
       }
+
       .slide-content h2 {
         font-size: 1.5rem;
       }
+
       .slide-content p {
         font-size: 0.85rem;
       }
+
       .section-title {
         font-size: 1.5rem;
       }
+
       .logo-item {
         width: 110px;
       }
+
       .logo-item i {
         font-size: 1.6rem;
       }
+
       .logo-item span {
         font-size: 0.7rem;
       }
     }
+    
   </style>
 </head>
 
@@ -1153,7 +1281,8 @@
   <section id="home" class="slider-section">
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="swiper-slide"
+          style="background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600');">
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <h2>Web & Ecommerce Excellence</h2>
@@ -1161,7 +1290,8 @@
             <a href="#services" class="slide-btn">Explore Services</a>
           </div>
         </div>
-        <div class="swiper-slide" style="background-image: url('https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="swiper-slide"
+          style="background-image: url('https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1600');">
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <h2>Award Winning Digital Agency</h2>
@@ -1169,7 +1299,8 @@
             <a href="#leads" class="slide-btn">Request Free Quote</a>
           </div>
         </div>
-        <div class="swiper-slide" style="background-image: url('https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="swiper-slide"
+          style="background-image: url('https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1600');">
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <h2>Data-Driven Marketing</h2>
@@ -1189,8 +1320,11 @@
     <div class="container about-flex">
       <div class="about-text">
         <h2 class="section-title">About <span style="color:#0066ff;">Trionexa</span></h2>
-        <p>Trionexa Technologies Pvt. Ltd. is an award-winning digital marketing company in Bihar, blending creativity with data. We help small businesses to large enterprises build powerful web solutions, dominate search engines, and engage audiences through strategic marketing.</p>
-        <p>Founded with a vision to deliver measurable growth, our team of developers, strategists, and creatives work relentlessly to turn ideas into revenue.</p>
+        <p>Trionexa Technologies Pvt. Ltd. is an award-winning digital marketing company in Bihar, blending creativity
+          with data. We help small businesses to large enterprises build powerful web solutions, dominate search
+          engines, and engage audiences through strategic marketing.</p>
+        <p>Founded with a vision to deliver measurable growth, our team of developers, strategists, and creatives work
+          relentlessly to turn ideas into revenue.</p>
         <div class="about-stats">
           <div class="stat-item">
             <div class="stat-icon"><i class="fas fa-trophy"></i></div>
@@ -1216,7 +1350,7 @@
         </div>
       </div>
       <div class="about-image">
-        <img src="https://wikiprospects.com/wp-content/uploads/2024/04/explore-careers.png" alt="AdNexa team">
+        <img src="https://wikiprospects.com/wp-content/uploads/2024/04/explore-careers.png" alt="Trionexa team">
       </div>
     </div>
   </section>
@@ -1227,7 +1361,8 @@
       <h2 class="section-title">Our <span style="color:#0066ff;">Core Services</span></h2>
       <p class="section-sub">Tailored digital solutions that drive growth and engagement.</p>
       <div id="services-container" class="services-grid">
-        <div class="loading-spinner" style="text-align:center; padding: 3rem;"><i class="fas fa-spinner fa-pulse"></i> Loading services...</div>
+        <div class="loading-spinner" style="text-align:center; padding: 3rem;"><i class="fas fa-spinner fa-pulse"></i>
+          Loading services...</div>
       </div>
     </div>
   </section>
@@ -1239,37 +1374,48 @@
   </div>
 
   <!-- Process flow including arrows between steps -->
-  <div class="process-flow">
-    <div class="process-card">
-      <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-      <h3>Identify</h3>
-      <p>Find opportunities, plan, chart goals and create a roadmap.</p>
+ <!-- Process flow including arrows between steps -->
+<div class="process-flow">
+  <div class="process-card">
+    <div class="step-icon">
+      <img src="https://img.freepik.com/premium-vector/identify-icon-identification-symbol-vector_883533-594.jpg" alt="Identify icon">
     </div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card">
-      <div class="step-icon"><i class="fas fa-rocket"></i></div>
-      <h3>Execute</h3>
-      <p>Deploy the strategies, improve engagement, target better.</p>
-    </div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card">
-      <div class="step-icon"><i class="fas fa-handshake"></i></div>
-      <h3>Discover</h3>
-      <p>Meet clients, understand their demand, finalize the project.</p>
-    </div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card">
-      <div class="step-icon"><i class="fas fa-funnel-dollar"></i></div>
-      <h3>Strategize</h3>
-      <p>Gather data, map customer journey, make sales funnel.</p>
-    </div>
-    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-    <div class="process-card">
-      <div class="step-icon"><i class="fas fa-chart-bar"></i></div>
-      <h3>Drive result</h3>
-      <p>Analyse the result, fix the loopholes, re-strategize, optimize ROI.</p>
-    </div>
+    <h3>Identify</h3>
+    <p>Find opportunities, plan, chart goals and create a roadmap.</p>
   </div>
+  <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+  <div class="process-card">
+    <div class="step-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/7017/7017547.png" alt="Execute icon">
+    </div>
+    <h3>Execute</h3>
+    <p>Deploy the strategies, improve engagement, target better.</p>
+  </div>
+  <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+  <div class="process-card">
+    <div class="step-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/8040/8040075.png" alt="Discover icon">
+    </div>
+    <h3>Discover</h3>
+    <p>Meet clients, understand their demand, finalize the project.</p>
+  </div>
+  <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+  <div class="process-card">
+    <div class="step-icon">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/000/350/846/small_2x/Business__2814_29.jpg" alt="Strategize icon">
+    </div>
+    <h3>Strategize</h3>
+    <p>Gather data, map customer journey, make sales funnel.</p>
+  </div>
+  <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+  <div class="process-card">
+    <div class="step-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/6291/6291909.png" alt="Drive result icon">
+    </div>
+    <h3>Drive result</h3>
+    <p>Analyse the result, fix the loopholes, re-strategize, optimize ROI.</p>
+  </div>
+</div>
 
   <!-- Our Work Portfolio -->
   <section id="work" style="background: #f8fafc;">
@@ -1277,47 +1423,144 @@
       <h2 class="section-title">Recent <span style="color:#0066ff;">Projects</span></h2>
       <p class="section-sub">Real results for real businesses — see what we've built.</p>
       <div class="work-grid">
-        <div class="work-item"><img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ecommerce"><div class="work-info"><h3>Luxury Fashion E‑commerce</h3><p>High‑performance Shopify store with 300% ROI increase.</p></div></div>
-        <div class="work-item"><img src="https://www.scnsoft.com/blog-pictures/web-portals/corporate-portal.png" alt="corporate"><div class="work-info"><h3>Corporate Web Portal</h3><p>Custom CRM + website for a logistics leader.</p></div></div>
-        <div class="work-item"><img src="https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg?auto=compress&cs=tinysrgb&w=600" alt="seo"><div class="work-info"><h3>SEO Domination</h3><p>Ranked #1 for 30+ keywords in 6 months.</p></div></div>
-        <div class="work-item"><img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600" alt="social"><div class="work-info"><h3>Social Media Growth</h3><p>+250% engagement for a beauty brand.</p></div></div>
+        <div class="work-item"><img
+            src="https://d1y41eupgbwbb2.cloudfront.net/images/blog/build-an-ecommerce-fashion-app-like-zara.webp"
+            alt="ecommerce">
+          <div class="work-info">
+            <h3>Luxury Fashion E‑commerce</h3>
+            <p>High‑performance Shopify store with 300% ROI increase.</p>
+          </div>
+        </div>
+        <div class="work-item"><img src="https://www.scnsoft.com/blog-pictures/web-portals/corporate-portal.png"
+            alt="corporate">
+          <div class="work-info">
+            <h3>Corporate Web Portal</h3>
+            <p>Custom CRM + website for a logistics leader.</p>
+          </div>
+        </div>
+        <div class="work-item"><img
+            src="https://images.squarespace-cdn.com/content/v1/62e3bd1d14b7b32e64a6f856/beeae0d5-5b37-41f1-a09f-99bdb9402d8b/Blu-Mint_digital-marketing-agency_SEO-strategy-3.jpg"
+            alt="seo">
+          <div class="work-info">
+            <h3>SEO Domination</h3>
+            <p>Ranked #1 for 30+ keywords in 6 months.</p>
+          </div>
+        </div>
+        <div class="work-item"><img
+            src="https://cdn.wedevs.com/uploads/2017/08/Blog_Post_Banner_01.png"
+            alt="social">
+          <div class="work-info">
+            <h3>Social Media Growth</h3>
+            <p>+250% engagement for a beauty brand.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Trusted Brands & Testimonials -->
   <div class="container">
-    <div class="clients-section">
-      <h3>Trusted by industry leaders</h3>
-      <div class="clients-sub">Innovative brands that drive results with us</div>
-      <div class="slider-container">
-        <div class="logo-track" id="logoSliderTrack">
-          <div class="logo-item"><i class="fab fa-google"></i><span>Google</span><small>digital partner</small></div>
-          <div class="logo-item"><i class="fab fa-microsoft"></i><span>Microsoft</span><small>AI cloud</small></div>
-          <div class="logo-item"><i class="fab fa-amazon"></i><span>Amazon</span><small>ecom leader</small></div>
-          <div class="logo-item"><i class="fab fa-apple"></i><span>Apple</span><small>innovation</small></div>
-          <div class="logo-item"><i class="fab fa-salesforce"></i><span>Salesforce</span><small>CRM expert</small></div>
-          <div class="logo-item"><i class="fab fa-slack"></i><span>Slack</span><small>collab hub</small></div>
-          <!-- duplicate set for infinite loop -->
-          <div class="logo-item"><i class="fab fa-google"></i><span>Google</span><small>digital partner</small></div>
-          <div class="logo-item"><i class="fab fa-microsoft"></i><span>Microsoft</span><small>AI cloud</small></div>
-          <div class="logo-item"><i class="fab fa-amazon"></i><span>Amazon</span><small>ecom leader</small></div>
-          <div class="logo-item"><i class="fab fa-apple"></i><span>Apple</span><small>innovation</small></div>
-          <div class="logo-item"><i class="fab fa-salesforce"></i><span>Salesforce</span><small>CRM expert</small></div>
-          <div class="logo-item"><i class="fab fa-slack"></i><span>Slack</span><small>collab hub</small></div>
+  <div class="clients-section">
+    <h3>Trusted by industry leaders</h3>
+    <div class="clients-sub">Innovative brands that drive results with us</div>
+    <div class="slider-container">
+      <div class="logo-track" id="logoSliderTrack">
+        <!-- Google Logo -->
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+          <span>Google</span>
+          <small>digital partner</small>
+        </div>
+        <!-- Microsoft Logo -->
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft">
+          <span>Microsoft</span>
+          <small>AI cloud</small>
+        </div>
+        <!-- Amazon Logo -->
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+          <span>Amazon</span>
+          <small>ecom leader</small>
+        </div>
+        <!-- Apple Logo -->
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+          <span>Apple</span>
+          <small>innovation</small>
+        </div>
+        <!-- Salesforce Logo -->
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce">
+          <span>Salesforce</span>
+          <small>CRM expert</small>
+        </div>
+        <!-- Slack Logo -->
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" alt="Slack">
+          <span>Slack</span>
+          <small>collab hub</small>
+        </div>
+        <!-- Duplicate set for seamless infinite loop -->
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+          <span>Google</span>
+          <small>digital partner</small>
+        </div>
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft">
+          <span>Microsoft</span>
+          <small>AI cloud</small>
+        </div>
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+          <span>Amazon</span>
+          <small>ecom leader</small>
+        </div>
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+          <span>Apple</span>
+          <small>innovation</small>
+        </div>
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce">
+          <span>Salesforce</span>
+          <small>CRM expert</small>
+        </div>
+        <div class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" alt="Slack">
+          <span>Slack</span>
+          <small>collab hub</small>
         </div>
       </div>
     </div>
-    <hr class="divider">
+  </div>
+  <hr class="divider">
+</div>
 
     <section id="testimonials" style="background: #f9fafb;">
       <div class="container">
         <h2 class="section-title">What <span style="color:#0066ff;">Clients Say</span></h2>
         <p class="section-sub">Trusted by businesses worldwide for delivering exceptional digital experiences.</p>
         <div class="testimonial-grid">
-          <div class="testimonial-card"><img src="https://img.freepik.com/free-photo/handsome-young-cheerful-man-with-arms-crossed_171337-1073.jpg?semt=ais_hybrid&w=740&q=80"><p>“AdNexa transformed our online presence. The SEO strategy increased our organic traffic by 200% within 6 months. Highly recommended!”</p><div class="client-name">Sarah Johnson, CEO of LuxeStyle</div></div>
-          <div class="testimonial-card"><img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg"><p>“Their ecommerce development team built a seamless Shopify store that boosted our sales by 150%. Professional, creative, and results-driven.”</p><div class="client-name">Michael Chen, Founder of UrbanCart</div></div>
-          <div class="testimonial-card"><img src="https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg"><p>“Amazing support and cutting-edge marketing campaigns. Our brand visibility skyrocketed thanks to AdNexa's PPC and social media expertise.”</p><div class="client-name">Priya Sharma, Marketing Head, Zenith Corp</div></div>
+          <div class="testimonial-card"><img
+              src="https://img.freepik.com/free-photo/handsome-young-cheerful-man-with-arms-crossed_171337-1073.jpg?semt=ais_hybrid&w=740&q=80">
+            <p>“AdNexa transformed our online presence. The SEO strategy increased our organic traffic by 200% within 6
+              months. Highly recommended!”</p>
+            <div class="client-name">Sarah Johnson, CEO of LuxeStyle</div>
+          </div>
+          <div class="testimonial-card"><img
+              src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg">
+            <p>“Their ecommerce development team built a seamless Shopify store that boosted our sales by 150%.
+              Professional, creative, and results-driven.”</p>
+            <div class="client-name">Michael Chen, Founder of UrbanCart</div>
+          </div>
+          <div class="testimonial-card"><img
+              src="https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg">
+            <p>“Amazing support and cutting-edge marketing campaigns. Our brand visibility skyrocketed thanks to
+              AdNexa's PPC and social media expertise.”</p>
+            <div class="client-name">Priya Sharma, Marketing Head, Zenith Corp</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1329,8 +1572,9 @@
       <div class="footer-grid">
         <!-- Column 1 -->
         <div class="footer-col">
-          <h4>Trionexa Technologies</h4>
-          <p>Award-winning digital marketing & development agency. We craft digital success stories for brands worldwide.</p>
+          <h4> Trionexa Technologies</h4>
+          <p>Award-winning digital marketing & development agency. We craft digital success stories for brands
+            worldwide.</p>
           <div class="payment-methods">
             <p>Secure payments</p>
             <div class="payment-icons">
@@ -1340,7 +1584,7 @@
             </div>
           </div>
           <div class="copyright">
-            © 2025 Trionexa Technologies Pvt. Ltd. All rights reserved.
+            ©2025 Trionexa Technologies Pvt. Ltd. All rights reserved.
           </div>
         </div>
 
@@ -1371,9 +1615,9 @@
         <div class="footer-col">
           <h4>Contact Info</h4>
           <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> Bihar, Patna, India</div>
-          <div class="contact-detail"><i class="fas fa-phone-alt"></i> +91 0000000000</div>
-          <div class="contact-detail"><i class="fas fa-envelope"></i> hello@adnexatech.com</div>
-          <div class="contact-detail"><i class="fab fa-whatsapp"></i> +91 0000000000</div>
+          <div class="contact-detail"><i class="fas fa-envelope"></i> connect@trionexatechnologies.co.in</div>
+          <div class="contact-detail"><i class="fas fa-envelope"></i> training@trionexatechnologies.co.in</div>
+          <div class="contact-detail"><i class="fab fa-whatsapp"></i> +91 75208 81339</div>
           <h4 style="margin-top: 1.5rem;">Newsletter</h4>
           <div class="newsletter-form">
             <input type="email" placeholder="Your email" id="newsEmail">
@@ -1390,9 +1634,9 @@
       </div>
     </div>
   </footer>
-
   <!-- Floating WhatsApp -->
-  <a href="https://wa.me/919999999999?text=Hello%20AdNexa%20team!%20I%20need%20assistance." class="float-wa" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/+91 75208 81339?text=Hello%20AdNexa%20team!%20I%20need%20assistance." class="float-wa"
+    target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -1419,7 +1663,7 @@
       const target = parseInt(counter.getAttribute('data-count'));
       let count = 0;
       const increment = target / speed;
-      
+
       const updateCount = () => {
         if (count < target) {
           count += increment;
