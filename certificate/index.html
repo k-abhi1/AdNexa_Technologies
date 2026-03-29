@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Trionexa Technologies | Certificate Verification</title>
+   <title> Certificate Verification| TrionexaTechnologies Pvt.Ltd </title>
     <link rel="icon" href="unnamed (1)-modified.png" type="image/x-icon">
   <!-- Google Fonts + Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -332,12 +332,15 @@
       </div>
 
       <div class="back-link">
-        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
       </div>
     </div>
   </div>
 
   <script>
+app.get('/certificate', (req, res) => {
+  res.sendFile(__dirname + '/certificate.html');
+});
     const verifyBtn = document.getElementById('verifyBtn');
     const certNumberInput = document.getElementById('certNumber');
     const verifyResult = document.getElementById('verifyResult');
