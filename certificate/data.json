@@ -24,6 +24,32 @@
           }
         }
       ]
+    },
+     {
+      "certificateNo": "WD2512701",
+      "candidate": {
+        "name": "Raushan Raj Bhashkar",
+        "college": "GOVERNMENT ENGINEERING COLLEGE Arwal",
+        "registrationNo" : "22153153031"
+      },
+      "domain": "Python Programming",
+      "programs": [
+        {
+          "mode": "offline",
+          "duration": {
+            "from": "10/12/2025",
+            "to": "20/12/2025"
+          }
+        },
+        {
+          "mode": "online",
+          "duration": {
+            "from": "01/01/2026",
+            "to": "15/01/2026"
+          }
+        }
+      ]
     }
+    
       ]
 }
