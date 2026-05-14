@@ -49,6 +49,24 @@
           }
         }
       ]
+    },
+    {
+      "certificateNo": "MS2512302",
+      "candidate": {
+        "name": "ABHISHEK YADAV",
+        "college": "GOVERNMENT ENGINEERING COLLEGE, ARWAL",
+        "registrationNo": "24101153041"
+      },
+      "domain": "AUTO CAD",
+      "programs": [
+        {
+          "mode": "Online",
+          "duration": {
+            "from": "22/12/2025",
+            "to": "2/01/2026"
+          }
+        }
+      ]
     }
     
       ]
